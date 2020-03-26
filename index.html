@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Paths Lab</title>
+    <style>
+        html {
+            background-color: rgb(90, 172, 90)
+        }
+
+        #car 
+        {
+            position: absolute;
+            offset-path: path('M 100 250 Q 100 100 300 150 Q 450 200 600 250 C 750 300 650 450 500 500 C 350 550 250 550 150 450 Q 100 400 100 250 ');
+            animation: drive 5000ms infinite linear;
+            width: 80px;   
+        }
+
+        
+
+
+        @keyframes drive {
+            0% {
+                offset-distance: 0%;
+            }
+            100% {
+                offset-distance: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="car" src="https://storage.needpix.com/rsynced_images/blank-1299404_1280.png" alt="car">
+    <svg height="600" width="720" >
+        <path d="M 100 250 Q 100 100 300 150 Q 450 200 600 250 C 750 300 650 450 500 500 C 350 550 250 550 150 450 Q 100 400 100 250 " stroke="#222222" stroke-width="80" fill="none"/>
+        <path d="M 100 250 Q 100 100 300 150 Q 450 200 600 250 C 750 300 650 450 500 500 C 350 550 250 550 150 450 Q 100 400 100 250 " stroke="#ffff0099" stroke-width="70" fill="none" stroke-dasharray="30"/>
+        <path d="M 100 250 Q 100 100 300 150 Q 450 200 600 250 C 750 300 650 450 500 500 C 350 550 250 550 150 450 Q 100 400 100 250 " stroke="#222222" stroke-width="60" fill="none"/>
+    </svg>
+</body>
+</html>
